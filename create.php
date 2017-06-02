@@ -1,3 +1,14 @@
+<?php
+$title="";
+$content="";
+
+   if (isset($_GET['filename'])){
+    $title = $_GET['filename'];
+    $content = file_get_contents('posts/'.$_GET['filename']);
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,13 +21,15 @@
     <style>
         body {
             text-align: center;
-            background: darkcyan;
+            background: #ecef1a;
         }
         
         #titre {
             width: 400px;
             border-radius: 4px;
             height: 30px;
+            border: none;
+            padding-left: 50px;
         }
         
         h1 {
@@ -26,19 +39,24 @@
         
         textarea {
             border-radius: 4px;
+            border: none;
+            padding: 50px;
         }
     </style>
 </head>
 
 <body>
     <h1>Nouvel article</h1>
-    <div id="formulaire">
-        <form action="create-file.php" method="POST">
-            <p><input type="text" name="titre" id="titre" /></p>
-            <p><textarea rows="25" cols="100" name="message"></textarea></p>
-            <p><input type="submit" value="submit" name="create" /></p>
-        </form>
-    </div>
+
+
+
+<form action="create-file.php" method="POST">
+    <p><input type="text" name="titre" id="titre" value="<?php echo $title;?>" /></p>
+    <p><textarea rows="20" cols="100" name="message" ><?php echo $content; ?></textarea></p>
+    <p><input type="submit" value="submit" name="create" /></p>
+</form>
+
+
 </body>
 
 </html>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        
+        </style>
 </head>
 <body>
     <h1>Mon Blog</h1>
@@ -19,6 +22,11 @@ echo'
     <form method="GET" action="delete.php">
         <input type="hidden" name="filename" value="'.$content.'">
         <input type="submit" value="delete">
+        </form>';
+        echo'
+        <form method="GET" action="create.php">
+        <input type="hidden" name="filename" value="'.$content.'">
+        <input type="submit" value="edit">
         </form>';
      }
 } ?>
