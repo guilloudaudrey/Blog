@@ -5,7 +5,10 @@ $content="";
    if (isset($_GET['filename'])){
     $title = $_GET['filename'];
     $content = file_get_contents('posts/'.$_GET['filename']);
+    header("location: index.php");
     }
+
+
 ?>
 
 

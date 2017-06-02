@@ -5,7 +5,7 @@ if (isset($_POST['create'])){
 $titre = $_POST['titre'];
 $message = $_POST['message'];
 
-if (!is_dir('posts')){
+if (!is_dir('posts')){ 
     mkdir('posts');
 
 }
@@ -15,6 +15,7 @@ fwrite($fichier, $message);
 fclose($fichier); //si on ne ferme pas, fichier en cours d'utilisation'
 
 echo'<p>Bravo !</p>'; 
+header("location: index.php");
 
 } else {
     echo'<p>formulaire non envoyé</p>';
