@@ -2,13 +2,10 @@
 $title="";
 $content="";
 
-   if (isset($_GET['filename'])){
-    $title = $_GET['filename'];
-    $content = file_get_contents('posts/'.$_GET['filename']);
-    header("location: index.php");
-    }
-
-
+   if (isset($_POST['filename'])){
+    $title = basename($_POST['filename'], ".txt");
+    $content = file_get_contents('posts/'.$_POST['filename']);
+    }  
 ?>
 
 
@@ -19,32 +16,67 @@ $content="";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <title>Document</title>
     <style>
+
+@font-face {
+  font-family: 'AlbertsthalTypewriter';
+  src: url('fonts/AlbertsthalTypewriter.eot?#iefix') format('embedded-opentype'),  url('fonts/AlbertsthalTypewriter.woff') format('woff'), url('fonts/AlbertsthalTypewriter.ttf')  format('truetype'), url('fonts/AlbertsthalTypewriter.svg#AlbertsthalTypewriter') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
         body {
             text-align: center;
             background: #ecef1a;
         }
         
         #titre {
-            width: 400px;
+            width: 50%;
             border-radius: 4px;
             height: 30px;
             border: none;
-            padding-left: 50px;
+            padding-left: 20px;
+            font-family: 'AlbertsthalTypewriter';
+            font-size : 1.3em;
+            outline: none;
+            text-transform : uppercase;
         }
         
         h1 {
-            font-family: 'Barrio', cursive;
+          font-family: 'Permanent Marker', cursive;
             font-size: 3em;
+       
         }
         
         textarea {
             border-radius: 4px;
             border: none;
             padding: 50px;
+            font-family: 'AlbertsthalTypewriter';
+            font-size: 1em;
+            width : 70%;
+            height : 300px;
+             outline: none;
         }
+
+        #submit{
+            font-family: 'Permanent Marker', cursive;
+            height: 40px;
+            text-align: center;
+            width: 130px;
+            border-radius:40px;
+            background: black;
+            color:white;
+            letter-spacing:1px;
+            text-shadow:0;
+        }
+
+          #submit:hover{
+              background: grey;
+          }
+
+
     </style>
 </head>
 
@@ -54,9 +86,10 @@ $content="";
 
 
 <form action="create-file.php" method="POST">
+<div id="machine">
     <p><input type="text" name="titre" id="titre" value="<?php echo $title;?>" /></p>
-    <p><textarea rows="20" cols="100" name="message" ><?php echo $content; ?></textarea></p>
-    <p><input type="submit" value="submit" name="create" /></p>
+    <p><textarea name="message" ><?php echo $content; ?></textarea></p>
+    <p><input type="submit" value="submit" name="create" id="submit" /></p>
 </form>
 
 

@@ -1,7 +1,6 @@
 <?php
 
 if (isset($_POST['create'])){
-
 $titre = $_POST['titre'];
 $message = $_POST['message'];
 

@@ -19,12 +19,12 @@ foreach($files as $content){
     echo '<h3>'.basename($content, ".txt").'</h3>';
     echo file_get_contents($dossier.$content);
 echo'
-    <form method="GET" action="delete.php">
+    <form method="POST" action="delete.php">
         <input type="hidden" name="filename" value="'.$content.'">
         <input type="submit" value="delete">
         </form>';
         echo'
-        <form method="GET" action="create.php">
+        <form method="POST" action="create.php">
         <input type="hidden" name="filename" value="'.$content.'">
         <input type="submit" value="edit">
         </form>';
