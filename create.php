@@ -85,9 +85,9 @@ $content="";
 
 
 
-<form action="create-file.php" method="POST">
-<div id="machine">
+<form action="edit.php" method="POST">
     <p><input type="text" name="titre" id="titre" value="<?php echo $title;?>" /></p>
+    <input type="hidden" name="previoustitle" value="<?php echo $title;?>"/>
     <p><textarea name="message" ><?php echo $content; ?></textarea></p>
     <p><input type="submit" value="submit" name="create" id="submit" /></p>
 </form>

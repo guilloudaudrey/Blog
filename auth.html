@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Authentification</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AlbertsthalTypewriter';
+            src: url('fonts/AlbertsthalTypewriter.eot?#iefix') format('embedded-opentype'), url('fonts/AlbertsthalTypewriter.woff') format('woff'), url('fonts/AlbertsthalTypewriter.ttf') format('truetype'), url('fonts/AlbertsthalTypewriter.svg#AlbertsthalTypewriter') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            height: 500px;
+            margin-top: 100px;
+            background: black;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 3em;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: yellow;
+            margin-top: 50px;
+            width: 40%;
+            height: 300px;
+            margin: auto;
+            border-radius: 20px;
+        }
+        
+        label {
+            margin-top: 10px;
+            font-family: 'AlbertsthalTypewriter';
+        }
+        
+        input {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CONNEXION </h1>
+    <form action="php/auth.php" method="POST">
+        <label for="name">Username</label>
+        <input type="text" name="name">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
