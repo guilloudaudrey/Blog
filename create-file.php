@@ -1,8 +1,8 @@
 <?php
 
 if (isset($_POST['create'])){
-$titre = $_POST['titre'];
-$message = $_POST['message'];
+$titre = htmlspecialchars($_POST['titre']);
+$message = htmlspecialchars($_POST['message']);
 
 if (!is_dir('posts')){ 
     mkdir('posts');

@@ -1,5 +1,5 @@
 <?php
-$content = $_POST['filename'];
+$content = htmlspecialchars($_POST['filename']);
     if(isset($_POST['filename']))
     {
    unlink('posts/'.$content);

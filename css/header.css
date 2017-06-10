@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'AlbertsthalTypewriter';
+    src: url('../fonts/AlbertsthalTypewriter.eot?#iefix') format('embedded-opentype'), url('../fonts/AlbertsthalTypewriter.woff') format('woff'), url('../fonts/AlbertsthalTypewriter.ttf') format('truetype'), url('../fonts/AlbertsthalTypewriter.svg#AlbertsthalTypewriter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    width: 15%;
+    text-align: center;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85%;
+    justify-content: center;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu:hover {
+    color: white;
+}
+
+.menu ul {
+    display: none;
+    width: 150px;
+    background: black;
+    margin-top: 92px;
+    position: relative;
+    left: -65px;
+}
+
+.menu ul li {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.menu:hover ul {
+    display: block;
+}
+
+.menu:hover {
+    color: white;
+}
+
+header {
+    background: black;
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+label {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Permanent Marker', cursive;
+    width: 100px;
+}
+
+a {
+    color: white;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+.fa fa-bars {
+    color: white;
+    font-size: 3em;
+}

@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST['create'])){
-$titre = $_POST['titre'];
-$message = $_POST['message'];
-$previoustitle = $_POST['previoustitle'];
+$titre = htmlspecialchars($_POST['titre']);
+$message = htmlspecialchars($_POST['message']);
+$previoustitle = htmlspecialchars($_POST['previoustitle']);
 
 unlink('posts/'.$previoustitle.'.txt');
 $fichier = fopen('posts/'.$titre.'.txt', 'w'); 

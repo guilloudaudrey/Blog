@@ -1,0 +1,44 @@
+        body {
+            margin-top: 100px;
+            background: url(../70.jpg) no-repeat;
+            background-size: cover;
+        }
+        
+        .formulaire {
+            background: #49a834;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 350px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        
+        form {
+            line-height: 40px;
+        }
+        
+        h1 {
+            font-family: 'Anton', sans-serif;
+            font-weight: normal;
+            font-size: 3em;
+            color: black;
+            margin-bottom: -10px;
+            text-align: center;
+        }
+        
+        label {
+            font-family: 'Permanent Marker', cursive;
+        }
+        
+        input[type="submit"] {
+            background: black;
+            color: white;
+            margin-top: 50px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            font-family: 'Permanent Marker', cursive;
+            width: 100px;
+        }
