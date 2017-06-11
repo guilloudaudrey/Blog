@@ -91,3 +91,17 @@ a {
     color: white;
     font-size: 3em;
 }
+
+.deconnexion {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.deconnexion button {
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Permanent Marker', cursive;
+    width: 150px;
+}

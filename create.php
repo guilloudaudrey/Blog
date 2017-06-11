@@ -17,20 +17,24 @@ $content="";
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <link rel="stylesheet" href="css/create.css">
-    <title>Document</title>
+    <title>Blog - Nouvel article</title>
 </head>
 
 <body>
-    <?php include("header.php"); ?>
+    <?php include("header2.php"); ?>
     
     <h1>Nouvel article</h1>
+    <?php
+        if (isset($_SESSION['nom'])){ ;?>
     <form action="edit.php" method="POST">
         <p><input type="text" name="titre" id="titre" value="<?php echo $title;?>" placeholder="titre"/></p>
         <input type="hidden" name="previoustitle" value="<?php echo $title;?>"/>
         <p><textarea name="message" ><?php echo $content; ?></textarea></p>
         <input type="submit" value="submit" name="create" id="submit" />
     </form>
-
+        <?php } else {
+        echo '<p class="connectezvous">Connectez-vous !</p><p class="inscrivezvous">ou <a href="inscription.html">inscrivez-vous</a>.</p>';
+        } ?>
 </body>
 
 </html>

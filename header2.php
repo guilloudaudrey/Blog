@@ -16,7 +16,7 @@
     session_start();
     if (!isset($_SESSION['nom'])){?>
     <header>
-        <form action="login.php" method="POST" class="formulaire">
+        <form action="login2.php" method="POST" class="formulaire">
         <label for="name">Username</label>
         <input type="text" name="pseudo">
         <label for="pass">Password</label>

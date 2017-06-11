@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Blog - Index</title>
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 
@@ -23,6 +23,8 @@ include("header.php");
         echo '<div class="text">';
         echo file_get_contents($dossier.$content);
         echo '</div>';
+        
+        if (isset($_SESSION['nom'])){
         echo'
             <div class="boutons">
             <form method="POST" action="delete.php">
@@ -34,9 +36,9 @@ include("header.php");
             <input type="hidden" name="filename" value="'.$content.'">
             <input type="submit" value="edit">
             </form>
-            </div>
-            
-            </section>';
+            </div>';
+            }
+            echo '</section>';
         }
     } ?>
 
