@@ -1,11 +1,12 @@
         body {
             margin-top: 100px;
-            background: url(../70.jpg) no-repeat;
+            background: url(../5.jpg) no-repeat;
             background-size: cover;
         }
         
         .formulaire {
-            background: #49a834;
+            background: #1a9e1f;
+            ;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -24,7 +25,7 @@
             font-family: 'Anton', sans-serif;
             font-weight: normal;
             font-size: 3em;
-            color: black;
+            color: white;
             margin-bottom: -10px;
             text-align: center;
         }
